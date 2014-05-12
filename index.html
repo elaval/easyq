@@ -1,0 +1,78 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- style -->
+    <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.css">
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body ng-app="AppEasyQ">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div ng-include="'views/navbar.html'"></div>
+    <div class="container" ng-view=""></div>
+    <div ng-include="'views/footer.html'"></div>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- jquery -->
+    <script type='text/javascript' src="http://code.jquery.com/jquery.js"></script>
+    <!-- bootstrap -->
+    <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.js"></script>
+    <!-- angularjs -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-cookies.js"></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.js"></script>
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+    <!-- firebase -->
+    <script type='text/javascript' src="https://cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <!-- firebase simple login -->
+    <script type='text/javascript' src="https://cdn.firebase.com/js/simple-login/1.3.2/firebase-simple-login.js"></script>
+    <!-- angularfire -->
+    <script type='text/javascript' src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.js"></script>
+    <!-- bootstrap ui -->
+    <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+    <!-- controller -->
+    <script src="scripts/controllers/categorys.js"></script>
+    <script src="scripts/controllers/view.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/controllers/auth.js"></script>
+
+    <!-- services -->
+    <script src="scripts/services/firebase_url.js"></script>
+    <script src="scripts/services/categorys.js"></script>
+    <script src="scripts/services/auth.js"></script>
+    <script src="scripts/services/user.js"></script>
+
+</body>
+</html>

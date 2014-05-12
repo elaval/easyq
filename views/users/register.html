@@ -1,0 +1,40 @@
+
+<div class="container">
+    <form class="form-signin" ng-submit="register()">
+
+      <p class="error"></p>
+
+      <h2 class="form-signin-heading text-center">Registrar Usuario</h2><br>
+
+      <input type="text" class="form-control text-center" placeholder="Nombre" ng-model="user.username" required autofocus><br>
+      <input type="text" class="form-control text-center" placeholder="Apellido" ng-model="user.surname" required><br>
+      <input type="email" class="form-control text-center" placeholder="Correo Electrónico" ng-model="user.email" required><br>
+      <input type="password" class="form-control text-center" placeholder="Contraseña" ng-model="user.password" required>
+
+      <div ng-show="forma.email.$dirty && forma.email.$invalid">
+
+        <p class="alert alert-warning text-center" ng-show="forma.email.$error.required">Campo Obligatorio</p>
+        <p class="alert alert-danger text-center" ng-show="forma.email.$error.email" >Email Invalido</p>
+
+      </div>
+
+      <div class="text-center">
+
+        <h4>Condiciones de Uso</h4>
+
+        <p>Esta aplicacion esta enfocada al ambito educacional, como herramienta de apoyo para cualquier quiz o test.<br>
+        El administrador de Tide Easy Q se reservan el derecho de remover, editar, mover o cerrar cualquier tema por cualquier razón.</p>
+        
+        <input type="checkbox" name="agreement" ng-model="user.agreement" required><br>
+
+        Acepto<br><br>
+
+      </div>
+
+      <button type="submit" class="btn btn-lg btn-primary btn-block"  ng-disabled="forma.$invalid" value="Register">Registrar Usuario</button><br>
+
+    </form>
+
+    <p ng-show="err" class="error">{{err}}</p>
+    
+</div>

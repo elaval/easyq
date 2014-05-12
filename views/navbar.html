@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default" role="navigation">
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+
+    </button>
+
+    <a class="navbar-brand" href="#">Easy Q</a>
+
+  </div>
+
+  <div ng-controller="NavCtrl" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right" ng-show="signedIn()">
+      <li>
+        <a href="#/users/{{ currentUser.username }}">
+          <!-- <img ng-src="http://www.gravatar.com/avatar/{{ currentUser.md5_hash }}" class="nav-pic" /> -->
+          {{currentUser.username}}
+        </a>
+      </li>
+      <li>
+        <a href="#" ng-click="logout()">Terminar Sesión</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" ng-hide="signedIn()">
+      <li>
+        <a href="#/login">Iniciar Sesión</a>
+      </li>
+      <li>
+        <a href="#/register">Registrarse</a>
+      </li>
+    </ul>
+  </div>
+</nav>

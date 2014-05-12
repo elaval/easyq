@@ -1,0 +1,26 @@
+
+<div class="form-default">
+
+  	<h2 class="text-center">{{category.title}}</h2><br>
+
+  	<p>{{category.description}}</p>
+
+	<ul class="list-group">
+	    <li class="list-group-item" data-ng-repeat="test in tests ">
+
+	      	<span class="badge"><a class="link-color" href="" data-ng-click="removeTest('{{test.$id}}')">Eliminar</a></span>
+	    	<span class="badge"><a class="link-color" href="#/tests/{{test.$id}}/edit">Editar</a></span>
+
+	    	<a href="#/tests/{{test.$id}}">{{test.name}}</a>
+
+	    </li>
+	</ul>
+
+	<div class="text-center">
+
+		<a href="#/tests/create"><img class="icons-flags" src="images/icons/mono/add.png"></a><br><br>
+
+	    <h3>Volver a <a href="#/category">Categorias</a>.</h3><br>
+
+	</div>
+</div>

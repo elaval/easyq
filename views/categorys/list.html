@@ -1,0 +1,21 @@
+
+<div class="form-default">
+
+	<h2 class="text-center">Categorias</h2><br>
+
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="(categoryId, category) in categorys" ng-show="signedIn() && category.owner === currentUser.username">
+
+			<span class="badge"><a class="link-color" ng-click="deleteCategory(categoryId)" ng-show="signedIn() && category.owner === currentUser.username">Eliminar</a></span>
+
+			<a href="#/categorys/{{categoryId}}">{{category.title}}</a>
+
+		</li>
+	</ul><br>
+
+	<div class="text-center">
+
+		<a href="#/categorys/create"><img class="icons-flags" src="images/icons/mono/add.png"></a>
+
+	</div>
+</div>
