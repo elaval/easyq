@@ -1,5 +1,5 @@
 
-<div class="form-default" ng-submit="submitCategory()">
+<div class="form-default" ng-submit="categoriesCtrl.submitCategory()">
     <form class="form-horizontal" role="form">
       <fieldset>
 
@@ -9,7 +9,7 @@
           <label class="col-sm-2 control-label" for="textinput">Nombre</label>
 	          <div class="col-sm-10">
 
-	            <input type="text" class="form-control" ng-model="category.title" required autofocus>
+	            <input type="text" class="form-control" ng-model="categoriesCtrl.newCategory.title" required autofocus>
 
 	          </div>
         </div>
@@ -18,7 +18,7 @@
           <label class="col-sm-2 control-label" for="textinput">Descripción</label>
 	          <div class="col-sm-10">
 
-	            <input type="text" class="form-control" ng-model="category.description" required>
+	            <input type="text" class="form-control" ng-model="categoriesCtrl.newCategory.description" required>
 
 	          </div>
         </div>
@@ -27,7 +27,7 @@
           <label class="col-sm-2 control-label" for="textinput">Fecha</label>
             <div class="col-sm-10">
 
-              <input type="datetime" class="form-control" ng-model="category.date" required>
+              <input type="datetime" class="form-control" ng-model="categoriesCtrl.newCategory.date" required>
 
             </div>
         </div>
